@@ -4,10 +4,24 @@
   "description": "Test runner dashboard — run tests, show pass/fail in TUI, track results",
   "main": "extensions/pi-test.ts",
   "pi": {
-    "commands": ["test", "test-watch", "test-coverage"],
-    "tools": ["run_tests"]
+    "commands": [
+      "test",
+      "test-watch",
+      "test-coverage"
+    ],
+    "tools": [
+      "run_tests"
+    ]
   },
-  "keywords": ["pi-package", "test", "testing", "vitest", "jest", "runner", "dashboard"],
+  "keywords": [
+    "pi-package",
+    "test",
+    "testing",
+    "vitest",
+    "jest",
+    "runner",
+    "dashboard"
+  ],
   "author": "artale",
   "license": "MIT",
   "peerDependencies": {
