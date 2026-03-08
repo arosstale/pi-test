@@ -1,6 +1,6 @@
 {
   "name": "@artale/pi-test",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Test runner dashboard — run tests, show pass/fail in TUI, track results",
   "main": "extensions/pi-test.ts",
   "pi": {

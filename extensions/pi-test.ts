@@ -203,7 +203,7 @@ export default function (api: ExtensionAPI) {
 		name: "test",
 		description: "Run tests (auto-detects framework)",
 		args: [{ name: "filter", description: "Test name filter (optional)", required: false }],
-		execute: async (ctx) => {
+		handler: async (args, ctx) => {
 			const cwd = process.cwd();
 			const { framework, cmd } = detectFramework(cwd);
 
@@ -228,7 +228,7 @@ export default function (api: ExtensionAPI) {
 	api.registerCommand({
 		name: "test-coverage",
 		description: "Run tests with coverage report",
-		execute: async (ctx) => {
+		handler: async (args, ctx) => {
 			const cwd = process.cwd();
 			const { framework } = detectFramework(cwd);
 
@@ -266,7 +266,7 @@ export default function (api: ExtensionAPI) {
 	api.registerCommand({
 		name: "test-watch",
 		description: "Re-run tests on file changes (toggle)",
-		execute: async (ctx) => {
+		handler: async (args, ctx) => {
 			if (watchCleanup) {
 				watchCleanup();
 				watchCleanup = null;
